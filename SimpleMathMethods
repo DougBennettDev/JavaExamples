@@ -1,0 +1,109 @@
+/*This program shows defined methods for simple arithmetic*/
+
+
+import java.util.Scanner;
+
+public class MathMethods{
+   /*Instead of using if and switch statements per the original program
+     this program utilizes methods that will be called when the user
+     enters the appropriate input 
+   */
+   public static void Multiplication()// Multiplication method
+   {
+        int Num1Int, Num2Int;
+        Scanner scnr = new Scanner(System.in);
+
+        System.out.println("Multiplication");
+
+        System.out.print("\nFirst Number: ");
+        Num1Int = scnr.nextInt();
+
+        System.out.print("\nSecond Number: ");
+        Num2Int = scnr.nextInt();
+
+        scnr.close();
+        System.out.println("\nProduct: " + Num1Int + " x " + Num2Int + " = " + (Num1Int * Num2Int));
+        
+   }   
+   public static void Division()// Division method
+   {
+        int Num1Int, Num2Int;
+        Scanner scnr = new Scanner(System.in);
+
+        System.out.println("Division");
+
+        System.out.print("\nFirst Number: ");
+        Num1Int = scnr.nextInt();
+
+        System.out.print("\nSecond Number: ");
+        Num2Int = scnr.nextInt();
+
+        scnr.close();
+        System.out.println("\nQuotient: " + Num1Int + " / " + Num2Int + " = " + (Num1Int / Num2Int));
+   }
+   public static void Addition()// Addition method
+   {
+
+        int Num1Int, Num2Int;
+        Scanner scnr = new Scanner(System.in);
+
+        System.out.println("Addition");
+
+        System.out.print("\nFirst Number: ");
+        Num1Int = scnr.nextInt();
+
+        System.out.print("\nSecond Number: ");
+        Num2Int = scnr.nextInt();
+
+        scnr.close();
+        System.out.println("\nSum: " + Num1Int + " + " + Num2Int + " = " + (Num1Int + Num2Int));
+   }
+   public static void Subtraction()//Subtraction method
+   {
+        int Num1Int, Num2Int;
+        Scanner scnr = new Scanner(System.in);
+
+        System.out.println("Subtraction");
+
+        System.out.print("\nFirst Number: ");
+        Num1Int = scnr.nextInt();
+
+        System.out.print("\nSecond Number: ");
+        Num2Int = scnr.nextInt();
+
+        scnr.close();
+        System.out.println("\nDifference: " + Num1Int + " - " + Num2Int + " = " + (Num1Int - Num2Int));
+   }
+   public static void main(String[] args) //main program
+   {
+
+        String usrInput = "";
+        Scanner scnr = new Scanner(System.in);
+
+        System.out.println("This Program is a simple calculator utilizing user-defined methods");
+
+        System.out.println("\nPlease Enter (M)ultiplication, (D)ivision, (A)ddition, or (S)ubtraction");
+        usrInput = scnr.next();
+        System.out.println(usrInput);
+
+
+        if (usrInput.equals("A")|| usrInput.equals("a")){
+            Addition();   //returns Addition method
+        }
+        else if (usrInput.equals("S")|| usrInput.equals("s")){
+            Subtraction(); //returns Subtraction method                                    
+        }
+        else if (usrInput.equals("D")|| usrInput.equals("d")){
+            Division(); // returns Division Method
+        }
+        else if (usrInput.equals("M")|| usrInput.equals("m")){
+            Multiplication(); // returns Multiplication method
+        }
+        else {
+            System.out.println("Invalid Input"); //if user input is not predefined input
+        }
+
+        System.out.println();
+        scnr.close();
+    }
+}
